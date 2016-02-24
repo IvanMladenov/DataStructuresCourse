@@ -19,20 +19,19 @@ namespace DistanceInLabyrinth
                 new string[] {"0", "0", "0", "x", "x", "0" },
                 new string[] {"0", "0", "0", "x", "0", "x" },
             };
-            Print(labyrinth);
-            Console.WriteLine();
-            Traverse(labyrinth, 2, 0, 1);
+
+            TraverseDFS(labyrinth, 2, 0, 1);
             Print(labyrinth);
         }
 
-        static void Traverse(string[][] matrix, int row, int col, int currentStep)
+        static void TraverseDFS(string[][] matrix, int row, int col, int currentStep)
         {
             //Check if we are in matrix - bottom of recursion
             if (row < 0 || col < 0 || row == matrix.Length || col == matrix[row].Length)
             {
                 return;
             }
-            //Sectond condition - bottom
+            //Second condition - bottom
             if (matrix[row][col] == "x" || matrix[row][col] == "*")
             {
                 return;
@@ -45,10 +44,10 @@ namespace DistanceInLabyrinth
 
             matrix[row][col] = currentStep.ToString();
 
-            Traverse(matrix, row, col + 1, currentStep+1); //Right
-            Traverse(matrix, row + 1, col, currentStep+1); //Bottom
-            Traverse(matrix, row, col - 1, currentStep+1); //Left
-            Traverse(matrix, row - 1, col, currentStep+1); //Up
+            TraverseDFS(matrix, row, col + 1, currentStep+1); //Right
+            TraverseDFS(matrix, row + 1, col, currentStep+1); //Bottom
+            TraverseDFS(matrix, row, col - 1, currentStep+1); //Left
+            TraverseDFS(matrix, row - 1, col, currentStep+1); //Up
         }
 
         static void Print(string[][] matrix)
