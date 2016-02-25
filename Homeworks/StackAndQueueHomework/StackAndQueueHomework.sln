@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseNumbersWithStack", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcSeqWithQueue", "CalcSeqWithQueue\CalcSeqWithQueue.csproj", "{DD9CB95B-F54D-4148-8F33-EFBEFE8F8704}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayBasedStack", "ArrayBasedStack\ArrayBasedStack.csproj", "{95203C05-645B-4F5F-8A66-63B34B8E3EFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DD9CB95B-F54D-4148-8F33-EFBEFE8F8704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD9CB95B-F54D-4148-8F33-EFBEFE8F8704}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD9CB95B-F54D-4148-8F33-EFBEFE8F8704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95203C05-645B-4F5F-8A66-63B34B8E3EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95203C05-645B-4F5F-8A66-63B34B8E3EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95203C05-645B-4F5F-8A66-63B34B8E3EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95203C05-645B-4F5F-8A66-63B34B8E3EFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
