@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ArrayBasedStack
+﻿namespace ArrayBasedStack
 {
-    class ArrayStack<T>
+    using System;
+
+    internal class ArrayStack<T>
     {
         private const int DefaultCapacity = 16;
 
@@ -17,7 +13,7 @@ namespace ArrayBasedStack
             this.elements = new T[capacity];
         }
 
-        public int  Count { get; set; }
+        public int Count { get; private set; }
 
         public void Push(T element)
         {
@@ -32,7 +28,7 @@ namespace ArrayBasedStack
 
         public T Pop()
         {
-            if (this.Count==0)
+            if (this.Count == 0)
             {
                 throw new InvalidOperationException("The stack is empty");
             }

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ArrayBasedStack
+﻿namespace ArrayBasedStack
 {
-    class Program
+    using System;
+
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var stack = new ArrayStack<int>();
 
@@ -20,6 +16,11 @@ namespace ArrayBasedStack
             Console.WriteLine(stack.Pop());
             Console.WriteLine(stack.Count);
             Console.WriteLine(stack.Pop());
+
+            int[] arr = stack.ToArray();
+
+            Console.WriteLine(arr[arr[0]]);
+            Console.WriteLine(arr.Length);
         }
     }
 }
