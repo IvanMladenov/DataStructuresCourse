@@ -11,14 +11,16 @@ namespace LinkedList
         static void Main(string[] args)
         {
             LinkedList<int> test = new LinkedList<int>();
+            test.Add(0);
             test.Add(1);
             test.Add(2);
             test.Add(3);
-            test.Add(4);
+            test.Add(3);
 
-            Console.WriteLine(test.Count);
-            test.Remove(2);
-            Console.WriteLine(test.Count);
+            test.Remove(0);
+
+            Console.WriteLine(test.FirstIndexOf(2));
+            Console.WriteLine(test.LastIndexOf(3));
         }
     }
 }

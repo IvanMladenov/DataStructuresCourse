@@ -39,7 +39,55 @@ namespace LinkedList
             this.Count++;
         }
 
+        public IEnumerator<ListNode<T>> GetEnumerator()
+        {
+            ListNode<T> current = this.firstNode;
 
+            while (current != null)
+            {
+                yield return current;
+                current = current.Next;
+            }
+        }
+
+        public int LastIndexOf(T value)
+        {
+            var currentNode = this.firstNode;
+            var counter = 0;
+            var index = -1;
+
+            while (currentNode != null)
+            {
+                if (currentNode.Value.Equals(value))
+                {
+                    index = counter;
+                }
+
+                counter++;
+                currentNode = currentNode.Next;
+            }
+
+            return index;
+        }
+
+        public int FirstIndexOf(T value)
+        {
+            var currentNode = this.firstNode;
+            var counter = 0;
+
+            while (currentNode!=null)
+            {
+                if (currentNode.Value.Equals(value))
+                {
+                    return counter;
+                }
+
+                counter++;
+                currentNode = currentNode.Next;
+            }
+
+            return -1;
+        }
 
         public void Remove(int index)
         {
@@ -56,7 +104,7 @@ namespace LinkedList
 
             if (prev == null)
             {
-                firstNode = null;
+                firstNode = next;
             }
             else if (node.Next == null)
             {

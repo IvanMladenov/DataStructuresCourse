@@ -1,4 +1,6 @@
-﻿namespace LinkedList
+﻿using System;
+
+namespace LinkedList
 {
     class ListNode<T>
     {
@@ -11,5 +13,10 @@
         public T Value { get; set; }
 
         public ListNode<T> Next { get; set; }
+
+        public override string ToString()
+        {
+            return this.Value.ToString();
+        }
     }
 }
