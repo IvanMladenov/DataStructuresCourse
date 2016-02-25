@@ -1,6 +1,7 @@
 ﻿namespace ArrayBasedStack
 {
     using System;
+    using System.Linq;
 
     internal class ArrayStack<T>
     {
@@ -41,6 +42,7 @@
         {
             var arr = new T[this.Count];
             Array.Copy(this.elements, arr, this.Count);
+            Array.Reverse(arr);
 
             return arr;
         }

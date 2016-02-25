@@ -19,7 +19,7 @@
 
             int[] arr = stack.ToArray();
 
-            Console.WriteLine(arr[arr[0]]);
+            Console.WriteLine(arr[0]);
             Console.WriteLine(arr.Length);
         }
     }
