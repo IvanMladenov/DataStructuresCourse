@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LinkedStack
+﻿namespace LinkedStack
 {
-    class LinkedStack<T>
+    using System;
+
+    internal class LinkedStack<T>
     {
         private StackNode<T> lastPushed;
 
@@ -14,7 +10,7 @@ namespace LinkedStack
 
         public void Push(T value)
         {
-            if (this.Count==0)
+            if (this.Count == 0)
             {
                 this.lastPushed = new StackNode<T>(value);
             }
