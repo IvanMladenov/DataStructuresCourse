@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    internal class ArrayStack<T>
+    public class ArrayStack<T>
     {
         private const int DefaultCapacity = 16;
 

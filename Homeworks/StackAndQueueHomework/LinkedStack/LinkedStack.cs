@@ -2,7 +2,7 @@
 {
     using System;
 
-    internal class LinkedStack<T>
+    public class LinkedStack<T>
     {
         private StackNode<T> lastPushed;
 
@@ -40,9 +40,10 @@
 
         public T[] ToArray()
         {
-            var arr = new T[this.Count];
+            int lenght = this.Count;
+            var arr = new T[lenght];
 
-            for (int i = 0; i < this.Count; i++)
+            for (int i = 0; i < lenght; i++)
             {
                 arr[i] = this.Pop();
             }
